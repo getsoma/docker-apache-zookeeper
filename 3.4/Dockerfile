@@ -16,6 +16,7 @@ LABEL \
     org.label-schema.vcs-url="https://github.com/smizy/docker-zookeeper"
 
 # ENV ZOOKEEPER_VERSION     $VERSION
+ENV ZOOKEEPER_VERSION     3.6.1
 ENV ZOOKEEPER_HOME        /usr/local/zookeeper-${ZOOKEEPER_VERSION}
 ENV ZOOKEEPER_DATA_DIR    /zookeeper
 ENV ZOOKEEPER_DATALOG_DIR /var/log/zookeeper
