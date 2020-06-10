@@ -30,11 +30,7 @@ RUN set -x \
         bash \
         openjdk8-jre \
         su-exec \ 
-    && mirror_url=$( \
-        wget -q -O - "http://www.apache.org/dyn/closer.cgi/?as_json=1" \
-        | grep "preferred" \
-        | sed -n 's#.*"\(http://*[^"]*\)".*#\1#p' \
-        ) \
+    && mirror_url=http://apache.mirrors.pair.com/ \
     && wget -q -O - ${mirror_url}/zookeeper/zookeeper-${ZOOKEEPER_VERSION}/apache-zookeeper-${ZOOKEEPER_VERSION}.tar.gz \
         | tar -xzf - -C /usr/local \
     ## user/dir/permmsion
